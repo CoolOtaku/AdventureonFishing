@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.MainActivity">
+
+    <TextureView
+        android:id="@+id/mainScreenBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:layout_width="260dp"
+        android:layout_height="210dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/background_menu"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:layout_width="208dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/gold_fish_background"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf">
+
+        <Button
+            android:layout_width="155dp"
+            android:layout_height="55dp"
+            android:background="@drawable/button_1"
+            android:onClick="openPlayWindow"
+            android:shadowColor="@color/black"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="@string/play" />
+
+        <Button
+            android:layout_width="155dp"
+            android:layout_height="55dp"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/button_1"
+            android:onClick="openStatisticsWindow"
+            android:shadowColor="@color/black"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="@string/statistics" />
+
+        <Button
+            android:layout_width="155dp"
+            android:layout_height="55dp"
+            android:background="@drawable/button_1"
+            android:onClick="exitGame"
+            android:shadowColor="@color/black"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="@string/exit"
+            tools:ignore="OnClick" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        tools:ignore="UselessLeaf">
+
+        <ImageButton
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/button_2"
+            android:onClick="openLink"
+            android:src="@drawable/policy"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/buttonMusic"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/button_2"
+            android:onClick="onOffMusic"
+            android:src="@drawable/music_off"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/locationRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginVertical="50dp"
+        android:background="@drawable/background_window"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/statisticsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginVertical="50dp"
+        android:background="@drawable/background_window"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</RelativeLayout>
