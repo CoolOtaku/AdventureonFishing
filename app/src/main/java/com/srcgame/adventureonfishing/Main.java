@@ -18,7 +18,7 @@ import com.onesignal.debug.LogLevel;
 import com.srcgame.adventureonfishing.model.GameResult;
 
 public class Main extends Application {
-    private static final String ONESIGNAL_APP_ID = "";
+    private static final String ONESIGNAL_APP_ID = "[YOU_ONESIGNAL_APP_ID]";
     private static final String PREFS_NAME = "MusicPreferences";
     public static final String MUSIC_PLAYING_KEY = "isMusicPlaying";
 
